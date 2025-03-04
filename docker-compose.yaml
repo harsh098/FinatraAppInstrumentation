@@ -1,5 +1,5 @@
 services:
-  spring-service:
+  finatra-service:
     image: ${IMAGE}:${IMAGE_TAG}
     ports:
       - "8888:8888"
