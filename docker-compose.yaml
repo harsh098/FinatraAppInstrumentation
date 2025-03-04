@@ -1,0 +1,15 @@
+services:
+  spring-service:
+    image: ${IMAGE}:${IMAGE_TAG}
+    ports:
+      - "8888:8888"
+    environment:
+      OTEL_RESOURCE_ATTRIBUTES: service.name=${SVC_NAME:-DemoService}
+      OTEL_EXPORTER_OTLP_ENDPOINT: ${OTEL_EXPORTER_OTLP_ENDPOINT}
+      OTEL_LOGS_EXPORTER: otlp
+      OTEL_TRACES_EXPORTER: otlp
+      OTEL_EXPORTER_OTLP_PROTOCOL: grpc
+
+
+
+
